@@ -1,1 +1,1 @@
-# 使用`uni-cloud`编写的项目
+# 使用`uni-app`编写的项目，结合`uni-cloud`
