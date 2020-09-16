@@ -2,7 +2,11 @@
 	<view class="tab-box">
 		<scroll-view scroll-x class="scroll-box">
 			<view class="tab-scroll-content">
-				<view v-for="(item) in tabList" :key="item.id" class="scroll-item">{{ item.name }}</view>
+				<view 
+				v-for="(item, index) in tabList" 
+				:key="item.id" 
+				:class="[activeIndex == index ? 'activeItem':'' ,'scroll-item']" 
+				@click="tabClick(item, index)">{{ item.name }}</view>
 			</view>
 		</scroll-view>
 		<view class="set-icon iconfont icon-caidan"></view>
@@ -11,14 +15,21 @@
 
 <script>
 export default {
-	props:{
+	props: {
 		tabList: {
 			type: Array,
-			default: ()=> []
+			default: () => []
 		}
 	},
 	data() {
-		return {};
+		return {
+			activeIndex: 0
+		};
+	},
+	methods: {
+		tabClick(item, index) {
+			this.activeIndex = index;
+		}
 	}
 };
 </script>
@@ -40,6 +51,9 @@ export default {
 				height: 90rpx;
 				flex-shrink: 0;
 				font-size: 32rpx;
+				&.activeItem {
+					color: $base-color;
+				}
 			}
 		}
 	}
@@ -52,7 +66,7 @@ export default {
 		text-align: center;
 		font-size: 42rpx;
 		&::after {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 50%;
 			left: 0;

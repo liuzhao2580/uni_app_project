@@ -3,21 +3,25 @@
 		{
 			"path": "pages/tabbar/home/home",
 			"style": {
-				"app-plus": {
-					"titleNView":false
-				},
 				"navigationBarTitleText":"首页"
 			}
 		},
 		{
-			"path": "pages/tabbar/personal/personal"
+			"path": "pages/tabbar/personal/personal",
+			"style": {
+				"navigationBarTitleText":"个人中心"
+			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F1F1F1",
-		"backgroundColor": "#FFFFFF"
+		"backgroundColor": "#FFFFFF",
+		"app-plus": {
+			"titleNView": false
+			
+		}
 	},
 	"tabBar": {
 		"selectedColor":"#ff2e24",

@@ -6,7 +6,6 @@
 				<text class="nav-text">内涵的不只是段子</text>
 			</view>
 		</view>
-		<view class="nav-view"></view>
 	</view>
 </template>
 
@@ -21,6 +20,9 @@
 </script>
 
 <style lang="scss">
+	.nav-bar {
+		height: 90rpx;
+	}
 .nav-fixed {
 	position: fixed;
 	display: flex;
@@ -53,8 +55,5 @@
 			color: #ccc;
 		}
 	}
-}
-.nav-view {
-	height: 90rpx;
 }
 </style>
