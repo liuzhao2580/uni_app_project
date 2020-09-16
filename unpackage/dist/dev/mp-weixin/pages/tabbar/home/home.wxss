@@ -24,57 +24,17 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.tab-box {
+.home-box {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
 }
-.tab-box .scroll-box {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
+.home-box .scroll-box {
   overflow: hidden;
-}
-.tab-box .scroll-box .tab-scroll-content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-}
-.tab-box .scroll-box .tab-scroll-content .scroll-item {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  padding: 0 30rpx;
-  height: 90rpx;
-  -webkit-flex-shrink: 0;
-          flex-shrink: 0;
-  font-size: 32rpx;
-}
-.tab-box .set-icon {
-  position: relative;
-  width: 90rpx;
-  height: 90rpx;
-  line-height: 90rpx;
-  text-align: center;
-  font-size: 42rpx;
-}
-.tab-box .set-icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 1px;
-  height: 50%;
-  background-color: #ccc;
 }
 

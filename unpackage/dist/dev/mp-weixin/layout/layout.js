@@ -127,14 +127,16 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
+
+
 {
   components: {
     navBar: navBar },
 
   data: function data() {
     return {};
-
-
   } };exports.default = _default;
 
 /***/ }),

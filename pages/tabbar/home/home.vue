@@ -1,7 +1,16 @@
 <template>
 	<layout>
-		<!-- 自定义tab组件 -->
-		<tab :tabList="tabList"></tab>
+		<view class="home-box">
+			<!-- 自定义tab组件 -->
+			<tab :tabList="tabList"></tab>
+			<scroll-view scroll-y="true" class="scroll-box">
+				<view >
+					<view class="" v-for="item in 110">
+						{{item}}
+					</view>
+				</view>
+			</scroll-view>
+		</view>
 	</layout>
 </template>
 
@@ -32,4 +41,13 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+	.home-box {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		.scroll-box {
+			overflow: hidden;
+		}
+	}
+</style>

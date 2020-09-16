@@ -43,5 +43,14 @@ page {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
+  overflow: hidden;
+  border: 1px solid pink;
+  box-sizing: border-box;
+}
+.layout-content .layout-scroll {
+  height: 100%;
+}
+.layout-content .layout-scroll .layout-scroll-content {
+  height: 100%;
 }
 

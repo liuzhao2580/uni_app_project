@@ -24,9 +24,6 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.nav-bar {
-  height: 90rpx;
-}
 .nav-fixed {
   position: fixed;
   display: -webkit-box;
@@ -69,5 +66,8 @@
 .nav-fixed .nav-search .nav-text {
   font-size: 32rpx;
   color: #ccc;
+}
+.nav-content {
+  height: 90rpx;
 }
 
