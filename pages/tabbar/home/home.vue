@@ -4,11 +4,7 @@
 			<!-- 自定义tab组件 -->
 			<tab :tabList="tabList"></tab>
 			<scroll-view scroll-y="true" class="scroll-box">
-				<view >
-					<view class="" v-for="item in 110">
-						{{item}}
-					</view>
-				</view>
+				<scroll-list></scroll-list>
 			</scroll-view>
 		</view>
 	</layout>
@@ -17,11 +13,13 @@
 <script>
 import layout from '@/layout/layout.vue';
 import tab from './tab/tab.vue'
+import scrollList from './scrollList/scrollList.vue'
 import { tabList_api } from '@/common/api/home';
 export default {
 	components: {
 		layout,
-		tab
+		tab,
+		scrollList
 	},
 	data() {
 		return {
@@ -48,6 +46,7 @@ export default {
 		flex-direction: column;
 		.scroll-box {
 			overflow: hidden;
+			flex: 1;
 		}
 	}
 </style>

@@ -39,7 +39,6 @@ page {
 .layout-content {
 	flex: 1;
 	overflow: hidden;
-	border: 1px solid pink;
 	box-sizing: border-box;
 	.layout-scroll {
 		height: 100%;
