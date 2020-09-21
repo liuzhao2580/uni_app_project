@@ -24,50 +24,9 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.nav-fixed {
-  position: fixed;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-  height: 90rpx;
-  background-color: #ff2e24;
-  padding: 0 20rpx;
+.swiper-box {
+  height: 100%;
+  border: 1px solid pink;
   box-sizing: border-box;
-}
-.nav-fixed .nav-search {
-  background-color: #fff;
-  width: 100%;
-  height: 60rpx;
-  border-radius: 30rpx;
-  box-sizing: content-box;
-  padding: 0 20rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-}
-.nav-fixed .nav-search .nav-icon {
-  font-size: 32rpx;
-  margin-right: 20rpx;
-  color: #ccc;
-}
-.nav-fixed .nav-search .nav-text {
-  font-size: 32rpx;
-  color: #ccc;
-}
-.nav-view {
-  height: 90rpx;
 }
 

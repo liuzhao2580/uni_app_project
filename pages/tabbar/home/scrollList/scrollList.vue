@@ -1,15 +1,32 @@
 <template>
 	<swiper class="swiper-box">
-		<swiper-item>
-			<view class="swiper-item">1</view>
-		</swiper-item>
-		<swiper-item>
-			<view class="swiper-item">2</view>
+		<swiper-item v-for="item in tabList" :key='item.id'>
+			<view class="swiper-item">{{item.name}}-{{text}}</view>
 		</swiper-item>
 	</swiper>
 </template>
 
 <script>
+	import { mapGetters } from 'vuex'
+	export default {
+		props:{
+			tabList: {
+				type: Array,
+				default: ()=> []
+			}
+		},
+		data() {
+			return {}
+		},
+		computed:{
+			...mapGetters({
+				text: "home/text"
+			})
+		},
+		mounted() {
+			console.log(this.text);
+		}
+	}
 </script>
 
 <style lang="scss">

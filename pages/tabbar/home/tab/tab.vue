@@ -27,6 +27,7 @@ export default {
 		};
 	},
 	methods: {
+		// 导航栏的点击事件
 		tabClick(item, index) {
 			this.activeIndex = index;
 		}

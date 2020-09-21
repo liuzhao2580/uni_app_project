@@ -1,1 +1,0 @@
-<view class="layout-box"><nav-bar vue-id="4513e2ab-1" bind:__l="__l"></nav-bar><view class="layout-content"><slot></slot></view></view>

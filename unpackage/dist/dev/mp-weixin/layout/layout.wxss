@@ -44,7 +44,6 @@ page {
   -webkit-flex: 1;
           flex: 1;
   overflow: hidden;
-  border: 1px solid pink;
   box-sizing: border-box;
 }
 .layout-content .layout-scroll {

@@ -4,7 +4,7 @@
 			<!-- 自定义tab组件 -->
 			<tab :tabList="tabList"></tab>
 			<scroll-view scroll-y="true" class="scroll-box">
-				<scroll-list></scroll-list>
+				<scroll-list :tabList='tabList'></scroll-list>
 			</scroll-view>
 		</view>
 	</layout>
