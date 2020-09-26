@@ -1,13 +1,21 @@
 const state = {
-	text: '测试数据'
+	activeCurrent: 0
 }
 
-const mutations = {}
+const mutations = {
+	MUT_changeCurrent(state, active) {
+		state.activeCurrent = active
+	}
+}
 
-const actions = {}
+const actions = {
+	ACT_changeCurrent({commit}, active) {
+		commit("MUT_changeCurrent", active)
+	}
+}
 
 const getters = {
-	text:state => state.text
+	activeCurrent:state => state.activeCurrent
 }
 
 export default {

@@ -5,7 +5,7 @@
 				<view 
 				v-for="(item, index) in tabList" 
 				:key="item.id" 
-				:class="[activeIndex == index ? 'activeItem':'' ,'scroll-item']" 
+				:class="[activeCurrent == index ? 'activeItem':'' ,'scroll-item']" 
 				@click="tabClick(item, index)">{{ item.name }}</view>
 			</view>
 		</scroll-view>
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
 	props: {
 		tabList: {
@@ -22,14 +23,21 @@ export default {
 		}
 	},
 	data() {
-		return {
-			activeIndex: 0
-		};
+		return {};
+	},
+	computed: {
+		...mapGetters({
+			activeCurrent: 'home/activeCurrent'
+		})
 	},
 	methods: {
+		...mapActions({
+			ACT_changeCurrent: "home/ACT_changeCurrent"
+		}),
 		// 导航栏的点击事件
 		tabClick(item, index) {
 			this.activeIndex = index;
+			this.ACT_changeCurrent(index)
 		}
 	}
 };
@@ -54,6 +62,7 @@ export default {
 				font-size: 32rpx;
 				&.activeItem {
 					color: $base-color;
+					border-bottom: 2px solid $base-color;
 				}
 			}
 		}

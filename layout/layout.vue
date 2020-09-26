@@ -1,7 +1,7 @@
 <template>
 	<view class="layout-box">
 		<!-- 导航栏头部输入框 -->
-		<nav-bar></nav-bar>
+		<header-bar></header-bar>
 		<!-- 内容输入部分 -->
 		<view class="layout-content">
 			<scroll-view scroll-y="true" class="layout-scroll">
@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import navBar from './navbar/navbar.vue';
+import headerBar from './header/header.vue';
 export default {
 	components: {
-		navBar
+		headerBar
 	},
 	data() {
 		return {};

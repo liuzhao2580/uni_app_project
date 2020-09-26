@@ -14,7 +14,7 @@
 import layout from '@/layout/layout.vue';
 import tab from './tab/tab.vue'
 import scrollList from './scrollList/scrollList.vue'
-import { tabList_api } from '@/common/api/home';
+import { tabbar_api } from '@/common/api/home';
 export default {
 	components: {
 		layout,
@@ -32,7 +32,7 @@ export default {
 	methods: {
 		// 初始化tab的数据
 		async init_tabList() {
-			const data = await tabList_api({ name: 'tabList' });
+			const data = await tabbar_api({ name: 'tabbar' });
 			this.tabList = data;
 		}
 	}
