@@ -3,14 +3,27 @@
 		{
 			"path": "pages/tabbar/home/home",
 			"style": {
-				"navigationBarTitleText":"首页"
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/tabbar/shopcar/shopcar",
+			"style": {
+				"navigationBarTitleText": "购物车"
 			}
 		},
 		{
 			"path": "pages/tabbar/personal/personal",
 			"style": {
-				"navigationBarTitleText":"个人中心"
+				"navigationBarTitleText": "个人中心"
 			}
+		}, {
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索页",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	],
 	"globalStyle": {
@@ -20,25 +33,30 @@
 		"backgroundColor": "#FFFFFF",
 		"app-plus": {
 			"titleNView": false
-			
+
 		}
 	},
 	"tabBar": {
-		"selectedColor":"#ff2e24",
+		"selectedColor": "#ff2e24",
 		"backgroundColor": "#FFFFFF",
-		"color":"#555555",
-		"list":[
-			{
-				"pagePath":"pages/tabbar/home/home",
-				"iconPath":"static/tabbar/home.png",
-				"selectedIconPath":"static/tabbar/home-active.png",
-				"text":"首页"
+		"color": "#555555",
+		"list": [{
+				"pagePath": "pages/tabbar/home/home",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home-active.png",
+				"text": "首页"
 			},
 			{
-				"pagePath":"pages/tabbar/personal/personal",
-				"iconPath":"static/tabbar/personal.png",
-				"selectedIconPath":"static/tabbar/personal-active.png",
-				"text":"个人中心"
+				"pagePath": "pages/tabbar/shopcar/shopcar",
+				"iconPath": "static/tabbar/shopcar.png",
+				"selectedIconPath": "static/tabbar/shopcar-active.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/tabbar/personal/personal",
+				"iconPath": "static/tabbar/personal.png",
+				"selectedIconPath": "static/tabbar/personal-active.png",
+				"text": "个人中心"
 			}
 		]
 	}

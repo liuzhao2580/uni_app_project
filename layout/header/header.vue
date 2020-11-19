@@ -1,23 +1,33 @@
 <template>
 	<view class="nav-bar">
 		<view class="nav-fixed">
-			<view class="nav-search">
-				<text class="iconfont icon-search-fill nav-icon" ></text>
+			<!-- 签到 -->
+			<view class="signed-box iconfont icon-qiandao"></view>
+			<!-- 搜索框 -->
+			<view class="nav-search" @click.stop="searchClick">
+				<text class="iconfont icon-search-fill nav-icon"></text>
 				<text class="nav-text">内涵的不只是段子</text>
 			</view>
+			<!-- 扫一扫 -->
+			<view class="cream-box iconfont icon-saoyisao"></view>
 		</view>
 		<view class="nav-content"></view>
 	</view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				
-			};
+export default {
+	data() {
+		return {};
+	},
+	methods: {
+		searchClick() {
+			uni.navigateTo({
+				url: '/pages/search/search'
+			});
 		}
 	}
+};
 </script>
 
 <style lang="scss">
@@ -31,16 +41,21 @@
 	width: 100%;
 	z-index: 99;
 	height: 90rpx;
-	background-color: $base-color;
 	padding: 0 20rpx;
-	box-sizing: border-box;
+	border-bottom: 1px solid #eee;
+	.iconfont {
+		font-size: 42rpx;
+		color: $base-color;
+	}
 	.nav-search {
 		background-color: #fff;
 		width: 100%;
 		height: 60rpx;
 		border-radius: 30rpx;
+		border: 1px solid $base-color;
 		box-sizing: content-box;
 		padding: 0 20rpx;
+		margin: 0 20rpx;
 		display: flex;
 		align-items: center;
 		.nav-icon {
