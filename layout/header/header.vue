@@ -2,7 +2,7 @@
 	<view class="nav-bar">
 		<view class="nav-fixed">
 			<!-- 签到 -->
-			<view class="signed-box iconfont icon-qiandao"></view>
+			<view class="signed-box iconfont icon-qiandao" @click='signedClick'></view>
 			<!-- 搜索框 -->
 			<view class="nav-search" @click.stop="searchClick">
 				<text class="iconfont icon-search-fill nav-icon"></text>
@@ -25,7 +25,8 @@ export default {
 			uni.navigateTo({
 				url: '/pages/search/search'
 			});
-		}
+		},
+		signedClick() {}
 	}
 };
 </script>
