@@ -1,7 +1,7 @@
 <template>
 	<swiper class="swiper-box" :current='activeCurrent' @change='swiperChange'>
 		<swiper-item v-for="item in tabList" :key="item.id" >
-			<view class="swiper-item">{{ item.name}}'111111111111111111111111111111111111111111111111111' </view>
+			<view class="swiper-item">{{ item.name}}</view>
 		</swiper-item>
 	</swiper>
 </template>
