@@ -1,20 +1,11 @@
 <template>
 	<view class="tab-box">
-		<scroll-view scroll-x class="scroll-box">
-			<view class="tab-scroll-content">
-				<view 
-				v-for="(item, index) in tabList" 
-				:key="item.id" 
-				:class="[activeCurrent == index ? 'activeItem':'' ,'scroll-item']" 
-				@click="tabClick(item, index)">{{ item.name }}</view>
-			</view>
-		</scroll-view>
-		<view class="set-icon iconfont icon-caidan"></view>
+		<u-tabs :list="tabList" :current="activeCurrent" @change="tabClick" active-color="#ff2e24"></u-tabs>
 	</view>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex';
 export default {
 	props: {
 		tabList: {
@@ -23,7 +14,9 @@ export default {
 		}
 	},
 	data() {
-		return {};
+		return {
+			current: 0
+		};
 	},
 	computed: {
 		...mapGetters({
@@ -32,59 +25,17 @@ export default {
 	},
 	methods: {
 		...mapActions({
-			ACT_changeCurrent: "home/ACT_changeCurrent"
+			ACT_changeCurrent: 'home/ACT_changeCurrent'
 		}),
 		// 导航栏的点击事件
-		tabClick(item, index) {
-			this.activeIndex = index;
-			this.ACT_changeCurrent(index)
+		tabClick(index) {
+			this.ACT_changeCurrent(index);
+		},
+		change(index) {
+			this.current = index;
 		}
 	}
 };
 </script>
 
-<style lang="scss">
-.tab-box {
-	display: flex;
-	.scroll-box {
-		flex: 1;
-		overflow: hidden;
-		.tab-scroll-content {
-			display: flex;
-			flex-wrap: nowrap;
-			.scroll-item {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				padding: 0 30rpx;
-				height: 90rpx;
-				flex-shrink: 0;
-				font-size: 32rpx;
-				&.activeItem {
-					color: $base-color;
-					border-bottom: 2px solid $base-color;
-				}
-			}
-		}
-	}
-
-	.set-icon {
-		position: relative;
-		width: 90rpx;
-		height: 90rpx;
-		line-height: 90rpx;
-		text-align: center;
-		font-size: 42rpx;
-		&::after {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			width: 1px;
-			height: 50%;
-			background-color: #ccc;
-		}
-	}
-}
-</style>
+<style lang="scss"></style>

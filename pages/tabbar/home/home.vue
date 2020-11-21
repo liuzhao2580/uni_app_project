@@ -47,6 +47,9 @@ export default {
 		.scroll-box {
 			overflow: hidden;
 			flex: 1;
+			background-color: pink;
+			padding: 0 24rpx;
+			padding-top: 20rpx;
 		}
 	}
 </style>

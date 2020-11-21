@@ -1,0 +1,25 @@
+{
+  "name": "uni_app_project",
+  "version": "1.0.0",
+  "description": "uni-app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuzhao2580/uni_app_project.git"
+  },
+  "keywords": [
+    "uni-app"
+  ],
+  "author": "liuzhao2580",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuzhao2580/uni_app_project/issues"
+  },
+  "homepage": "https://github.com/liuzhao2580/uni_app_project#readme",
+  "dependencies": {
+    "uview-ui": "^1.8.2"
+  }
+}

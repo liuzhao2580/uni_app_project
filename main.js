@@ -1,7 +1,11 @@
 import Vue from 'vue'
+import uView from 'uview-ui'
 import App from './App'
 import store from '@/store'
 Vue.config.productionTip = false
+
+// 导入 uView-ui 组件
+Vue.use(uView)
 
 // 引入全局的字体图标
 import '@/common/css/iconfont.css'
