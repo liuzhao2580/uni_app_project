@@ -1,1 +1,0 @@
-<swiper class="swiper-box"><block wx:for="{{tabList}}" wx:for-item="item" wx:for-index="__i0__" wx:key="id"><swiper-item><view class="swiper-item">{{item.name+"-"+text}}</view></swiper-item></block></swiper>

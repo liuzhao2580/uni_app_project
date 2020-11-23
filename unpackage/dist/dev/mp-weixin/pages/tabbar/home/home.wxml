@@ -1,1 +1,0 @@
-<layout vue-id="076aba62-1" bind:__l="__l" vue-slots="{{['default']}}"><view class="home-box"><tab vue-id="{{('076aba62-2')+','+('076aba62-1')}}" tabList="{{tabList}}" bind:__l="__l"></tab><scroll-view class="scroll-box" scroll-y="true"><scroll-list vue-id="{{('076aba62-3')+','+('076aba62-1')}}" tabList="{{tabList}}" bind:__l="__l"></scroll-list></scroll-view></view></layout>

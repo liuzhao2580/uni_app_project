@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "首页",
-  "usingComponents": {
-    "layout": "/layout/layout",
-    "tab": "/pages/tabbar/home/tab/tab",
-    "scroll-list": "/pages/tabbar/home/scrollList/scrollList"
-  }
-}
