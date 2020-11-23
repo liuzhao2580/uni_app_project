@@ -1,6 +1,6 @@
 <template>
 	<view class="tab-box">
-		<u-tabs :list="tabList" :current="activeCurrent" @change="tabClick" active-color="#ff2e24"></u-tabs>
+		<u-tabs :list="tabList" :current="activeCurrent" @change="tabClick" active-color="#ff2e24" height="60"></u-tabs>
 	</view>
 </template>
 

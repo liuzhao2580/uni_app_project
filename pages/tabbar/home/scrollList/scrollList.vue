@@ -43,5 +43,10 @@ export default {
 .swiper-box {
 	height: 100%;
 	box-sizing: border-box;
+	.swiper-item {
+		width: 100%;
+		height: 100%;
+		background-color: pink;
+	}
 }
 </style>
