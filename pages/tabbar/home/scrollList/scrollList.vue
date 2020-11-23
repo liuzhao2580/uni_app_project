@@ -1,14 +1,27 @@
 <template>
 	<swiper class="swiper-box" :current='activeCurrent' @change='swiperChange'>
 		<swiper-item v-for="item in tabList" :key="item.id" >
-			<view class="swiper-item">{{ item.name}}</view>
+			<view class="swiper-item">
+				<template v-if="item.name === '推荐'">
+					<Recommend />
+				</template>
+				<template v-else>
+					<Common :gainItem='item'/>
+				</template>
+			</view>
 		</swiper-item>
 	</swiper>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
+import Recommend from '../Recommend/Recommend'
+import Common from '../Common/Common'
 export default {
+	components:{
+		Recommend,
+		Common
+	},
 	props: {
 		tabList: {
 			type: Array,
@@ -46,7 +59,6 @@ export default {
 	.swiper-item {
 		width: 100%;
 		height: 100%;
-		background-color: pink;
 	}
 }
 </style>
