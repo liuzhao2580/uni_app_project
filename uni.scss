@@ -14,10 +14,13 @@
 
 // uview-ui
 @import 'uview-ui/theme.scss';
+@import "@/common/css";
 
 /* 颜色变量 */
 // 全局颜色
 $base-color: #ff2e24;
+// 全局背景色
+$base-bgc: #f4f4f4;
 
 /* 行为相关颜色 */
 $uni-color-primary: #007aff;

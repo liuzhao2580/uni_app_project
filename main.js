@@ -10,7 +10,6 @@ Vue.use(uView)
 // 引入全局的字体图标
 import '@/common/css/iconfont.css'
 
-
 // 引入全局样式
 import '@/common/css/resect.css'
 App.mpType = 'app'

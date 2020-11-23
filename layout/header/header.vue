@@ -44,6 +44,7 @@ export default {
 	height: 90rpx;
 	padding: 0 20rpx;
 	border-bottom: 1px solid #eee;
+	background-color: #fff;
 	.iconfont {
 		font-size: 42rpx;
 		color: $base-color;
