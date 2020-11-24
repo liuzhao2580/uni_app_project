@@ -1,25 +1,26 @@
 <template>
 	<view class="recommend-box">
-		<view class="nav-list-box">
-			<view class="list-item" v-for="(item,index) in navListData" :key="index">
-				<image class="img-box" src="../../../../static/tabbar/home-active.png" mode=""></image>
-				<text class="text-title">{{item.title}}</text>
-			</view>
-		</view>
+		<nav-list :navListData="navListData"></nav-list>
 		<!-- 秒杀活动 -->
 		<view class="second-kill-box borderRadius">
-			<view class="title">
-				秒杀
+			<view class="header-box">
+				<view class="title-box">
+					<text class="title">秒杀</text>
+					<text class="time"></text>
+				</view>
+				<text class="more">更多</text>
 			</view>
-			<view class="sk-box">
-				
-			</view>
+			<view class="sk-box"></view>
 		</view>
 	</view>
 </template>
 
 <script>
+import navList from './components/nav-list.vue';
 export default {
+	components: {
+		navList
+	},
 	data() {
 		return {
 			navListData: [
@@ -63,28 +64,6 @@ export default {
 
 <style lang="scss">
 .recommend-box {
-	.nav-list-box {
-		height: 280rpx;
-		background-color: #fff;
-		display: flex;
-		flex-wrap: wrap;
-		.list-item {
-			width: 25%;
-			padding: 5rpx;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			.text-title {
-				
-			}
-			.img-box {
-				height: 80rpx;
-				width: 80rpx;
-			}
-		}
-	}
 	.second-kill-box {
 		margin: 20rpx 0;
 		background-color: #fff;
