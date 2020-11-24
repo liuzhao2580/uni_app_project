@@ -6,6 +6,15 @@
 				<text class="text-title">{{item.title}}</text>
 			</view>
 		</view>
+		<!-- 秒杀活动 -->
+		<view class="second-kill-box borderRadius">
+			<view class="title">
+				秒杀
+			</view>
+			<view class="sk-box">
+				
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -54,10 +63,9 @@ export default {
 
 <style lang="scss">
 .recommend-box {
-	padding: 0 10rpx;
-	background-color: #fff;
 	.nav-list-box {
 		height: 280rpx;
+		background-color: #fff;
 		display: flex;
 		flex-wrap: wrap;
 		.list-item {
@@ -76,6 +84,11 @@ export default {
 				width: 80rpx;
 			}
 		}
+	}
+	.second-kill-box {
+		margin: 20rpx 0;
+		background-color: #fff;
+		height: 260rpx;
 	}
 }
 </style>
