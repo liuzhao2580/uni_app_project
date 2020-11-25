@@ -1,25 +1,19 @@
 <template>
 	<view class="recommend-box">
+		<!-- 导航菜单 -->
 		<nav-list :navListData="navListData"></nav-list>
 		<!-- 秒杀活动 -->
-		<view class="second-kill-box borderRadius">
-			<view class="header-box">
-				<view class="title-box">
-					<text class="title">秒杀</text>
-					<text class="time"></text>
-				</view>
-				<text class="more">更多</text>
-			</view>
-			<view class="sk-box"></view>
-		</view>
+		<second-kill></second-kill>
 	</view>
 </template>
 
 <script>
 import navList from './components/nav-list.vue';
+import secondKill from './components/second-kill.vue'
 export default {
 	components: {
-		navList
+		navList,
+		secondKill
 	},
 	data() {
 		return {
@@ -64,10 +58,6 @@ export default {
 
 <style lang="scss">
 .recommend-box {
-	.second-kill-box {
-		margin: 20rpx 0;
-		background-color: #fff;
-		height: 260rpx;
-	}
+	
 }
 </style>
