@@ -12,7 +12,7 @@
 			</view>
 		</view>
 		<view class="sk-box">
-			<good-card size="middle" :goodsCardList='[]'></good-card>
+			<goods-card size="middle" :goodsCardList='[]'></goods-card>
 		</view>
 		<!-- 更多按钮点击触发模态框 -->
 		<u-modal v-model="moreShow" content="开发中"></u-modal>

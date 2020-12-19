@@ -7,7 +7,7 @@
 		</view>
 		<!-- 商品列表 -->
 		<view class="">
-			<good-card :goodsCardList='[]'></good-card>
+			<goods-card :goodsCardList='[]'></goods-card>
 		</view>
 	</view>
 </template>
