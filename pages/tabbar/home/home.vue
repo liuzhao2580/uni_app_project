@@ -33,6 +33,7 @@ export default {
 		// 初始化tab的数据
 		async init_tabList() {
 			const data = await tabbar_api({ name: 'tabbar' });
+			console.log(data);
 			this.tabList = data;
 		}
 	}

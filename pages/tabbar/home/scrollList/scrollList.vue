@@ -1,8 +1,8 @@
 <template>
 	<swiper class="swiper-box" :current='activeCurrent' @change='swiperChange'>
-		<swiper-item v-for="item in tabList" :key="item.id" >
+		<swiper-item v-for="item in tabList" :key="item._id" >
 			<view class="swiper-item">
-				<template v-if="item.name === '推荐'">
+				<template v-if="item.category_name === '推荐'">
 					<Recommend />
 				</template>
 				<template v-else>

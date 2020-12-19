@@ -1,6 +1,6 @@
 <template>
 	<view class="tab-box u-border-bottom">
-		<u-tabs :list="tabList" :current="activeCurrent" @change="tabClick" active-color="#ff2e24" height="60"></u-tabs>
+		<u-tabs name='category_name' :list="tabList" :current="activeCurrent" @change="tabClick" active-color="#ff2e24" height="60"></u-tabs>
 	</view>
 </template>
 
