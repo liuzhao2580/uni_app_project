@@ -5,18 +5,20 @@
 * 3、small 小尺寸大小，只显示图片 */
 <template>
 	<view class="goods-card-box" >
-		<!-- 商品图片 -->
-		<view class="goods-image-box">
-			<u-image class="goods-image" :height="height" src="@/static/tabbar/personal-active.png" mode=""></u-image>
-		</view>
-		<!-- 商品简介 -->
-		<view class="goods-details" v-if="size === 'default'">
-			<text>zhesssssssssssssssssssssssssssssssssssssssssssssssssssssss</text>
-		</view>
-		<!-- 商品价格 -->
-		<view class="goods-price">
-			<view class="now-price"><u-icon name="rmb"></u-icon>1999</view>
-			<view class="old-price"><u-icon name="rmb"></u-icon>2888</view>
+		<view class="goods-card-item" v-for="(item ,index) in goodsCardList" :key='index'>
+			<!-- 商品图片 -->
+			<view class="goods-image-box">
+				<u-image class="goods-image" :height="imageHeight" src="@/static/tabbar/personal-active.png" mode=""></u-image>
+			</view>
+			<!-- 商品简介 -->
+			<view class="goods-details" v-if="size === 'default'">
+				<text class="textOverflowHidden2">zhesssssssssssssssssssssssssssssssssssssssssssssssssssssss</text>
+			</view>
+			<!-- 商品价格 -->
+			<view class="goods-price">
+				<view class="now-price"><u-icon name="rmb"></u-icon>1999</view>
+				<view class="old-price"><u-icon name="rmb"></u-icon>2888</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -24,13 +26,19 @@
 <script>
 export default {
 	props:{
+		/** 需要 循环的数组 */
+		goodsCardList: {
+			type: Array,
+			default: () => [],
+			required: true
+		},
 		// 尺寸
 		size: {
 			type: String,
 			default: 'default'
 		},
 		// 图片高度
-		height: {
+		imageHeight: {
 			type: Number,
 			default: 200
 		}
@@ -44,9 +52,18 @@ export default {
 
 <style lang="scss">
 .goods-card-box {
-	height: 300rpx;
-	width: 200rpx;
+	display: flex;
+	justify-content: space-between;
+	.goods-card-item {
+		height: 300rpx;
+		min-width: 200rpx;
+		flex: 0.5;
+		background-color: #FFFFFF;
+	}
 	.goods-image-box {
+	}
+	.goods-details {
+		
 	}
 	.goods-price {
 		display: flex;

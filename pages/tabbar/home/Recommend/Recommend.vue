@@ -4,16 +4,20 @@
 		<nav-list :navListData="navListData"></nav-list>
 		<!-- 秒杀活动 -->
 		<second-kill></second-kill>
+		<!-- 猜你喜欢 -->
+		<recommend-list></recommend-list>
 	</view>
 </template>
 
 <script>
 import navList from './components/nav-list.vue';
 import secondKill from './components/second-kill.vue'
+import recommendList from './components/recommend-list.vue'
 export default {
 	components: {
 		navList,
-		secondKill
+		secondKill,
+		recommendList
 	},
 	data() {
 		return {
@@ -57,7 +61,5 @@ export default {
 </script>
 
 <style lang="scss">
-.recommend-box {
-	
-}
+
 </style>
