@@ -1,13 +1,14 @@
 <template>
 	<swiper class="swiper-box" :current='activeCurrent' @change='swiperChange'>
+		<!-- 推荐页面 -->
+		<swiper-item>
+			<view class="swiper-item">
+				<Recommend />
+			</view>
+		</swiper-item>
 		<swiper-item v-for="item in tabList" :key="item._id" >
 			<view class="swiper-item">
-				<template v-if="item.category_name === '推荐'">
-					<Recommend />
-				</template>
-				<template v-else>
-					<Common :gainItem='item'/>
-				</template>
+				<Common :gainItem='item'/>
 			</view>
 		</swiper-item>
 	</swiper>
