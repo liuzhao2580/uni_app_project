@@ -1,25 +1,22 @@
 <template>
-	<swiper class="swiper-box" :current='activeCurrent' @change='swiperChange'>
+	<swiper class="swiper-box" :current="activeCurrent" @change="swiperChange">
 		<!-- 推荐页面 -->
 		<swiper-item>
-			<view class="swiper-item">
-				<Recommend />
-			</view>
+			<view class="swiper-item"><Recommend /></view>
 		</swiper-item>
-		<swiper-item v-for="item in tabList" :key="item._id" >
-			<view class="swiper-item">
-				<Common :gainItem='item'/>
-			</view>
+		<swiper-item v-for="item in tabList" :key="item._id">
+			<view class="swiper-item"><Common :gainItem="item" /></view>
 		</swiper-item>
 	</swiper>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import Recommend from '../Recommend/Recommend'
-import Common from '../Common/Common'
+import Recommend from '../Recommend/Recommend';
+import Common from '../Common/Common';
+import { recommend_API } from '@/common/api/home.js';
 export default {
-	components:{
+	components: {
 		Recommend,
 		Common
 	},
@@ -30,27 +27,39 @@ export default {
 		}
 	},
 	data() {
-		return {};
+		return {
+			goodsCardListData: []
+		};
 	},
 	computed: {
 		...mapGetters({
 			activeCurrent: 'home/activeCurrent'
 		})
 	},
-	mounted() {},
-	methods:{
+	mounted() {
+		this.init_recommend();
+	},
+	methods: {
 		...mapActions({
-			ACT_changeCurrent: "home/ACT_changeCurrent"
+			ACT_changeCurrent: 'home/ACT_changeCurrent',
+			ACT_saveTabListData: 'home/ACT_saveTabListData'
 		}),
 		// swiper 的改变事件
 		swiperChange(e) {
-			const {source, current} = e.detail
+			const { source, current } = e.detail;
 			console.log(source, current);
 			// 说明是用户滑动的时候改变
-			if(source == 'touch') this.ACT_changeCurrent(current)
+			if (source == 'touch') this.ACT_changeCurrent(current);
+			
+		},
+		/** 调用接口,获取 的数据 */
+		async init_recommend() {
+			const getData = await recommend_API({ name: 'goodsList' });
+			console.log(getData);
+			this.ACT_saveTabListData(getData)
 		}
 	}
-}
+};
 </script>
 
 <style lang="scss">

@@ -54,8 +54,13 @@ export default {
 					title: 'VIP会员',
 					src: ''
 				}
-			]
+			],
 		};
+	},
+	mounted() {
+	},
+	methods:{
+		
 	}
 };
 </script>
