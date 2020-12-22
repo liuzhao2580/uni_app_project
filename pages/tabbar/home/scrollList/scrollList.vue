@@ -4,7 +4,7 @@
 		<swiper-item>
 			<view class="swiper-item"><Recommend /></view>
 		</swiper-item>
-		<swiper-item v-for="item in tabList" :key="item._id">
+		<swiper-item v-for="item in tabList" :key="item._id" :item-id="item._id">
 			<view class="swiper-item"><Common :gainItem="item" /></view>
 		</swiper-item>
 	</swiper>
@@ -47,7 +47,7 @@ export default {
 		// swiper 的改变事件
 		swiperChange(e) {
 			const { source, current } = e.detail;
-			console.log(source, current);
+			console.log(e, current);
 			// 说明是用户滑动的时候改变
 			if (source == 'touch') this.ACT_changeCurrent(current);
 			
