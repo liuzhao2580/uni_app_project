@@ -54,7 +54,10 @@ export default {
 		},
 		/** 调用接口,获取 的数据 */
 		async init_recommend() {
-			const getData = await recommend_API({ name: 'goodsList' });
+			const getData = await recommend_API({ name: 'goodsList', data: {
+				pageSize: 10,
+				pageNum: 1
+			} });
 			console.log(getData);
 			this.ACT_saveTabListData(getData)
 		}
