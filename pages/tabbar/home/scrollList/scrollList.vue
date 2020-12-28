@@ -42,7 +42,8 @@ export default {
 	methods: {
 		...mapActions({
 			ACT_changeCurrent: 'home/ACT_changeCurrent',
-			ACT_saveTabListData: 'home/ACT_saveTabListData'
+			ACT_saveTabListData: 'home/ACT_saveTabListData',
+			skillListData: "home/ACT_skillListData"
 		}),
 		// swiper 的改变事件
 		swiperChange(e) {
@@ -60,6 +61,7 @@ export default {
 			} });
 			console.log(getData.data);
 			this.ACT_saveTabListData(getData.data)
+			this.skillListData(getData.data.filter(item => item.is_skill))
 		}
 	}
 };

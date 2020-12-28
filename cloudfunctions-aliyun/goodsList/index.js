@@ -30,7 +30,8 @@ exports.main = async (event, context) => {
 		comment_count: true,
 		is_recommend: true,
 		is_new: true,
-		is_hot: true
+		is_hot: true,
+		is_skill: true
 	})
 	.end()
 	

@@ -8,7 +8,7 @@
 		<view class="goods-card-item borderRadius" v-for="(item ,index) in goodsCardList" :key='index'>
 			<!-- 商品图片 -->
 			<view class="goods-image-box">
-				<u-image class="goods-image" :height="imageHeight" :src="item.goods_thumb" mode=""></u-image>
+				<u-image class="goods-image" :border-radius="10" :height="imageHeight" :src="item.goods_thumb" mode=""></u-image>
 			</view>
 			<!-- 商品简介 -->
 			<view class="goods-details" v-if="size === 'default'">
@@ -17,7 +17,7 @@
 			<!-- 商品价格 -->
 			<view class="goods-price">
 				<view class="now-price"><u-icon name="rmb"></u-icon>{{item.goods_price}}</view>
-				<view class="old-price" v-if="item.goods_old_price"><u-icon name="rmb"></u-icon>2888</view>
+				<view class="old-price" v-if="item.goods_old_price"><u-icon name="rmb"></u-icon>{{item.goods_old_price}}</view>
 			</view>
 		</view>
 	</view>

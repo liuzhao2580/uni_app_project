@@ -12,7 +12,7 @@
 			</view>
 		</view>
 		<view class="sk-box">
-			<goods-card size="middle" :goodsCardList='[]'></goods-card>
+			<goods-card size="middle" :goodsCardList='skillList()'></goods-card>
 		</view>
 		<!-- 更多按钮点击触发模态框 -->
 		<u-modal v-model="moreShow" content="开发中"></u-modal>
@@ -20,13 +20,20 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import { RandomMath } from '@/common/utils/randomMath.js'
 export default {
 	data() {
 		return {
 			countDown: null,
 			howTime: null,
-			moreShow: false,
+			moreShow: false
 		};
+	},
+	computed:{
+		...mapGetters({
+			skillListData: 'home/skillListData'
+		})
 	},
 	created() {
 		this.timeInter();
@@ -77,7 +84,20 @@ export default {
 			}
 		},
 		moreBtn() {
-			console.log(111);
+			console.log(skillList())
+		},
+		skillList() {
+			const getList = this.skillListData
+			let setList = []
+			if(getList.length > 2) {
+				setList = this.skillListData.slice(0,2)
+				setInterval(() => {
+					setList.splice(0, 1, getList[RandomMath(RandomMath.length)])
+					console.log(setList);
+				}, 2000)
+			}
+			else setList = getList
+			return setList
 		}
 	}
 };
