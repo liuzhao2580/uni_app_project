@@ -11,6 +11,8 @@ const mutations = {
 	// 存储 tab 栏的数据
 	MUT_saveTabListData(state, data) {
 		state.tabListData[state.activeCurrent] = data
+		// 用来解决 vue 无法监听数据变化的问题
+		state.tabListData = Object.assign({},state.tabListData)
 	}
 }
 
@@ -25,7 +27,8 @@ const actions = {
 }
 
 const getters = {
-	activeCurrent:state => state.activeCurrent
+	activeCurrent:state => state.activeCurrent,
+	tabListData: state => state.tabListData
 }
 
 export default {

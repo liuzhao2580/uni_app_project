@@ -7,16 +7,23 @@
 		</view>
 		<!-- 商品列表 -->
 		<view class="">
-			<goods-card :goodsCardList='[]'></goods-card>
+			<goods-card :goodsCardList='tabListData[0]'></goods-card>
 		</view>
 	</view>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
 	data() {
 		return {
+			goodsCardList: []
 		}
+	},
+	computed:{
+		...mapGetters({
+			tabListData: 'home/tabListData'
+		})
 	}
 }
 </script>

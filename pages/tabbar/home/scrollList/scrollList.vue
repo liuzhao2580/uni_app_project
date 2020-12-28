@@ -58,8 +58,8 @@ export default {
 				pageSize: 10,
 				pageNum: 1
 			} });
-			console.log(getData);
-			this.ACT_saveTabListData(getData)
+			console.log(getData.data);
+			this.ACT_saveTabListData(getData.data)
 		}
 	}
 };
@@ -72,6 +72,7 @@ export default {
 	.swiper-item {
 		width: 100%;
 		height: 100%;
+		overflow: auto;
 	}
 }
 </style>
