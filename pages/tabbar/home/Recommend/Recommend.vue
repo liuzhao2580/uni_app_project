@@ -24,40 +24,41 @@ export default {
 			navListData: [
 				{
 					title: '限时秒杀',
-					src: ''
+					src: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-minions/6cd41740-49d6-11eb-b997-9918a5dda011.png'
 				},
 				{
 					title: '数码电器',
-					src: ''
+					src: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-minions/6b62d400-49d6-11eb-bd01-97bc1429a9ff.png'
 				},
 				{
 					title: '充值缴费',
-					src: ''
+					src: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-minions/68c25f90-49d6-11eb-8a36-ebb87efcf8c0.png'
 				},
 				{
 					title: '潮流服饰',
-					src: ''
+					src: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-minions/681cf7d0-49d6-11eb-a16f-5b3e54966275.png'
 				},
 				{
 					title: '签到领钱',
-					src: ''
+					src: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-minions/6ab72ab0-49d6-11eb-a16f-5b3e54966275.png'
 				},
 				{
 					title: '9块9包邮',
-					src: ''
+					src: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-minions/6769ad60-49d6-11eb-a16f-5b3e54966275.png'
 				},
 				{
 					title: '今日爆款',
-					src: ''
+					src: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-minions/69784210-49d6-11eb-a16f-5b3e54966275.png'
 				},
 				{
 					title: 'VIP会员',
-					src: ''
+					src: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-minions/6c1fbb60-49d6-11eb-a16f-5b3e54966275.png'
 				}
 			],
 		};
 	},
 	mounted() {
+		console.log(123);
 	},
 	methods:{
 		

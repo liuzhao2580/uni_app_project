@@ -5,7 +5,7 @@
 * 3、small 小尺寸大小，只显示图片 */
 <template>
 	<view class="goods-card-box">
-		<view class="goods-card-item borderRadius" v-for="(item ,index) in goodsCardList" :key='index'>
+		<view :class="[`goods-card-${size}`,'goods-card-item','borderRadius']" v-for="(item ,index) in goodsCardList" :key='index'>
 			<!-- 商品图片 -->
 			<view class="goods-image-box">
 				<u-image class="goods-image" :border-radius="10" :height="imageHeight" :src="item.goods_thumb" mode=""></u-image>
@@ -32,7 +32,7 @@ export default {
 			default: () => [],
 			required: true
 		},
-		// 尺寸
+		// 尺寸 默认是default  中等 middle 小型 small
 		size: {
 			type: String,
 			default: 'default'

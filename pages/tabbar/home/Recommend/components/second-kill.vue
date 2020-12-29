@@ -12,7 +12,7 @@
 			</view>
 		</view>
 		<view class="sk-box">
-			<goods-card size="middle" :goodsCardList='skillList()'></goods-card>
+			<goods-card size="small" :goodsCardList='skillList'></goods-card>
 		</view>
 		<!-- 更多按钮点击触发模态框 -->
 		<u-modal v-model="moreShow" content="开发中"></u-modal>
@@ -27,13 +27,18 @@ export default {
 		return {
 			countDown: null,
 			howTime: null,
-			moreShow: false
+			moreShow: false,
+			setInter: null,
+			saveSkillList: []
 		};
 	},
 	computed:{
 		...mapGetters({
 			skillListData: 'home/skillListData'
-		})
+		}),
+		skillList() {
+			return this.skillListData.slice(0,2)
+		}
 	},
 	created() {
 		this.timeInter();
@@ -84,21 +89,11 @@ export default {
 			}
 		},
 		moreBtn() {
-			console.log(skillList())
+			console.log(123)
 		},
-		skillList() {
-			const getList = this.skillListData
-			let setList = []
-			if(getList.length > 2) {
-				setList = this.skillListData.slice(0,2)
-				setInterval(() => {
-					setList.splice(0, 1, getList[RandomMath(RandomMath.length)])
-					console.log(setList);
-				}, 2000)
-			}
-			else setList = getList
-			return setList
-		}
+	},
+	beforeDestroy() {
+		clearInterval(this.setInter)
 	}
 };
 </script>

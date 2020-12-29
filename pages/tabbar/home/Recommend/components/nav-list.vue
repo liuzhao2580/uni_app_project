@@ -1,7 +1,7 @@
 <template>
 	<view class="nav-list-box">
 		<view class="list-item" v-for="(item, index) in navListData" :key="index">
-			<image class="img-box" src="@/static/tabbar/home-active.png" mode=""></image>
+			<image class="img-box" :src="item.src" mode=""></image>
 			<text class="text-title">{{ item.title }}</text>
 		</view>
 	</view>
