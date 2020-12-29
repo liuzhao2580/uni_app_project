@@ -54,7 +54,7 @@ export default {
 					title: 'VIP会员',
 					src: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-minions/6c1fbb60-49d6-11eb-a16f-5b3e54966275.png'
 				}
-			],
+			]
 		};
 	},
 	mounted() {

@@ -6,8 +6,9 @@
 			</u-image>
 		</view>
 		<!-- 商品列表 -->
-		<view class="">
+		<view class="u-skeleton">
 			<goods-card :goodsCardList='tabListData[0]'></goods-card>
+			<u-skeleton :loading="loading" :animation="true" bgColor="#FFF"></u-skeleton>
 		</view>
 	</view>
 </template>
@@ -17,7 +18,7 @@ import { mapGetters } from 'vuex'
 export default {
 	data() {
 		return {
-			goodsCardList: []
+			loading: true
 		}
 	},
 	computed:{
