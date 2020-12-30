@@ -4,7 +4,7 @@
 		<swiper-item>
 			<view class="swiper-item"><Recommend /></view>
 		</swiper-item>
-		<swiper-item v-for="item in tabList" :key="item._id" :item-id="item._id">
+		<swiper-item v-for="item in tabList" :key="item._id" :item-id="item.category_name">
 			<view class="swiper-item"><Common :gainItem="item" /></view>
 		</swiper-item>
 	</swiper>
@@ -33,7 +33,8 @@ export default {
 	},
 	computed: {
 		...mapGetters({
-			activeCurrent: 'home/activeCurrent'
+			activeCurrent: 'home/activeCurrent',
+			tabListData: 'home/tabListData'
 		})
 	},
 	mounted() {
@@ -48,16 +49,19 @@ export default {
 		// swiper 的改变事件
 		swiperChange(e) {
 			const { source, current } = e.detail;
-			console.log(e, current);
+			console.log(e.detail, current,this.tabListData);
+			if(this.tabListData[current]) return
+			this.init_recommend(e.detail.currentItemId)
 			// 说明是用户滑动的时候改变
 			if (source == 'touch') this.ACT_changeCurrent(current);
 			
 		},
 		/** 调用接口,获取 的数据 */
-		async init_recommend() {
+		async init_recommend(category_name = null) {
 			const getData = await recommend_API({ name: 'goodsList', data: {
 				pageSize: 10,
-				pageNum: 1
+				pageNum: 1,
+				category_name
 			} });
 			console.log(getData.data);
 			this.ACT_saveTabListData(getData.data)

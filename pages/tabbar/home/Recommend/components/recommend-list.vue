@@ -8,7 +8,6 @@
 		<!-- 商品列表 -->
 		<view class="u-skeleton">
 			<goods-card :goodsCardList='tabListData[0]'></goods-card>
-			<u-skeleton :loading="loading" :animation="true" bgColor="#FFF"></u-skeleton>
 		</view>
 	</view>
 </template>

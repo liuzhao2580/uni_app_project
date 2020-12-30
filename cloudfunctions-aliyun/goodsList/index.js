@@ -7,14 +7,14 @@ exports.main = async (event, context) => {
 	 event = {
 		 pageSize: 10,
 		 pageNum: 1,
-		 id?: string
+		 category_name?: string
 	 }
 	 */
 	console.log('event : ', event)
 	
-	const {pageSize = 10,pageNum = 1,id} = event
+	const {pageSize = 10,pageNum = 1,category_name} = event
 	
-	const filter = id ? {category_id: id} : {is_recommend: true}
+	const filter = category_name ? {category_name} : {is_recommend: true}
 	// 聚合操作 https://uniapp.dcloud.io/uniCloud/cf-database?id=aggregate
 	const data = await collection
 	.aggregate()
