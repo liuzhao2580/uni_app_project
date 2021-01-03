@@ -1,0 +1,73 @@
+// 对象的 key 为集合名称
+// key.data 是集合的记录数据，数组内一项为一条数据
+// 以部分数据、部分字段为例
+{
+	"article": { // 文章表
+	},
+	"user": { // 用户表
+		"data": [{
+				"author_name": "小火车况且况且",
+				"avatar": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-pgfxdvln08wfa8a9f6/1f366830-4cab-11eb-b997-9918a5dda011.jpg",
+				"status": "normal",
+				"fans_count": 0,
+				"explain": "吹着前奏 望着天空 我想起花瓣试着掉落",
+				"gender": "男",
+				"follow_count": 0,
+				"integral_count": "",
+				"article_likes_ids": [],
+				"author_likes_ids": [],
+				"thumbs_up_article_ids": [],
+				"article_ids": []
+			},
+			{
+				"author_name": "小飞机呼哧呼哧",
+				"avatar": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-pgfxdvln08wfa8a9f6/2fb96590-4cab-11eb-8a36-ebb87efcf8c0.png",
+				"status": "normal",
+				"fans_count": 0,
+				"explain": "消失的下雨天 我好想再淋一遍",
+				"gender": "女",
+				"follow_count": 0,
+				"integral_count": "",
+				"article_likes_ids": [],
+				"author_likes_ids": [],
+				"thumbs_up_article_ids": [],
+				"article_ids": []
+			}
+		]
+
+	},
+	"categories": { // 分类表
+		"data": [{
+				"name": "热榜",
+				"user": []
+			}, {
+				"name": "生活",
+				"user": []
+			},
+			{
+				"name": "电影",
+				"user": []
+			},
+			{
+				"name": "游戏",
+				"user": []
+			},
+			{
+				"name": "科技",
+				"user": []
+			},
+			{
+				"name": "娱乐",
+				"user": []
+			},
+			{
+				"name": "美食",
+				"user": []
+			},
+			{
+				"name": "历史",
+				"user": []
+			}
+		]
+	}
+}

@@ -1,8 +1,7 @@
 'use strict';
-// 获取 tabbar 数据
 const db = uniCloud.database()
 exports.main = async (event, context) => {
-	const collection = db.collection('opendb-mall-categories')
+	const collection = db.collection("categories")
 	const {
 		data
 	} = await collection.get()

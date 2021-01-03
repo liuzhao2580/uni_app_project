@@ -3,7 +3,3 @@ import http from './http.js'
 export const tabbar_api = (params)=> {
 	return http(params)
 }
-/** 获取首页的猜你喜欢的数据 */
-export const recommend_API = (params) => {
-	return http(params)
-}

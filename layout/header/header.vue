@@ -8,17 +8,28 @@
 				<text class="iconfont icon-search-fill nav-icon"></text>
 				<text class="nav-text">内涵的不只是段子</text>
 			</view>
-			<!-- 扫一扫 -->
-			<view class="cream-box iconfont icon-saoyisao"></view>
+			<!-- 发布文章 -->
+			<view class="cream-box iconfont icon-fabu" @click="releaseClick"></view>
 		</view>
 		<view class="nav-content"></view>
+		<!-- 发布文章 -->
+		<u-popup v-model.sync="releaseModelValue" mode="bottom">
+			<release-model />
+		</u-popup>
 	</view>
 </template>
 
 <script>
+
 export default {
+	components:{
+		releaseModel: () => import("./components/release-model.vue")
+	},
 	data() {
-		return {};
+		return {
+			// 文章发布 弹出框
+			releaseModelValue: false
+		};
 	},
 	methods: {
 		searchClick() {
@@ -26,7 +37,12 @@ export default {
 				url: '/pages/search/search'
 			});
 		},
-		signedClick() {}
+		signedClick() {},
+		// 文章发布
+		releaseClick() {
+			console.log(12);
+			this.releaseModelValue = true
+		}
 	}
 };
 </script>

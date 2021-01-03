@@ -1,24 +1,18 @@
 <template>
 	<swiper class="swiper-box" :current="activeCurrent" @change="swiperChange">
-		<!-- 推荐页面 -->
-		<swiper-item>
-			<view class="swiper-item"><Recommend /></view>
-		</swiper-item>
 		<swiper-item v-for="item in tabList" :key="item._id" :item-id="item.category_name">
-			<view class="swiper-item"><Common :gainItem="item" /></view>
+			<view class="swiper-item"><Common-page :gainItem="item" :goodsCardList='tabListData[activeCurrent]' /></view>
 		</swiper-item>
 	</swiper>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import Recommend from '../Recommend/Recommend';
-import Common from '../Common/Common';
 import { recommend_API } from '@/common/api/home.js';
+import CommonPage from '../components/Common-page.vue'
 export default {
 	components: {
-		Recommend,
-		Common
+		CommonPage
 	},
 	props: {
 		tabList: {
@@ -28,7 +22,6 @@ export default {
 	},
 	data() {
 		return {
-			goodsCardListData: []
 		};
 	},
 	computed: {
@@ -38,34 +31,32 @@ export default {
 		})
 	},
 	mounted() {
-		this.init_recommend();
+		// this.init_recommend();
 	},
 	methods: {
 		...mapActions({
 			ACT_changeCurrent: 'home/ACT_changeCurrent',
-			ACT_saveTabListData: 'home/ACT_saveTabListData',
-			skillListData: "home/ACT_skillListData"
+			ACT_saveTabListData: 'home/ACT_saveTabListData'
 		}),
 		// swiper 的改变事件
 		swiperChange(e) {
 			const { source, current } = e.detail;
 			console.log(e.detail, current,this.tabListData);
 			if(this.tabListData[current]) return
-			this.init_recommend(e.detail.currentItemId)
+			// this.init_recommend(e.detail.currentItemId)
 			// 说明是用户滑动的时候改变
 			if (source == 'touch') this.ACT_changeCurrent(current);
 			
 		},
 		/** 调用接口,获取 的数据 */
 		async init_recommend(category_name = null) {
-			const getData = await recommend_API({ name: 'goodsList', data: {
+			const getData = await recommend_API({ name: '', data: {
 				pageSize: 10,
 				pageNum: 1,
 				category_name
 			} });
 			console.log(getData.data);
 			this.ACT_saveTabListData(getData.data)
-			this.skillListData(getData.data.filter(item => item.is_skill))
 		}
 	}
 };

@@ -25,7 +25,7 @@ export default {
 		tabListData() {
 			let array = [
 				{
-					_id: '1',
+					_id: "0",
 					category_name: '推荐'
 				}
 			]
