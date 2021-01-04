@@ -14,7 +14,7 @@
 		<view class="nav-content"></view>
 		<!-- 发布文章 -->
 		<u-popup v-model.sync="releaseModelValue" mode="bottom">
-			<release-model />
+			<release-model @closeModel='releaseModelValue = false'/>
 		</u-popup>
 	</view>
 </template>

@@ -18,7 +18,7 @@
 		</view>
 		<!-- 发布选项 -->
 		<view class="release-type">
-			<view class="type-item" v-for="(typeItem,index) in releaseTypeList" :key='index'>
+			<view class="type-item" v-for="(typeItem,index) in releaseTypeList" :key='index' @click="typeItemClick(typeItem)">
 				<view class="type-icon">
 					<text :class="['iconfont', typeItem.icon]" :style="{color: typeItem.color}"></text>
 				</view>
@@ -26,8 +26,7 @@
 			</view>
 		</view>
 		<!-- 关闭按钮 -->
-		<view class="close-btn">
-			
+		<view class="close-btn iconfont icon-guanbi1" @click="$emit('closeModel')">
 		</view>
 	</view>
 </template>
@@ -41,7 +40,8 @@ export default {
 				{
 					title: '写文章',
 					icon: 'icon-wenzhang-copy',
-					color: '#508ddc'
+					color: '#508ddc',
+					url: '/pages/rich-text-editor/rich-text-editor'
 				},
 				{
 					title: '发视频',
@@ -52,6 +52,16 @@ export default {
 		}
 	},
 	methods:{
+		typeItemClick(item) {
+			const {url} = item
+			if(url) {
+				uni.navigateTo({
+					url,
+					animationType: 'pop-in',
+					animationDuration: 200
+				})
+			}
+		}
 	}
 }
 </script>
@@ -60,14 +70,14 @@ export default {
 .release-box {
 	display: flex;
 	flex-direction: column;
-	height: 600rpx;
-	padding: 20rpx;
+	height: 400rpx;
+	padding: 30rpx;
 	.user-info-box {
 		display: flex;
 		justify-content: space-between;
 		font-size: 22rpx;
 		font-weight: 600;
-		margin-bottom: 20rpx;
+		margin-bottom: 20rpx ;
 		.user-info {
 			.user-avatar {
 				width: 50rpx;
@@ -90,6 +100,7 @@ export default {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			width: 100rpx;
 			.type-icon {
 				.iconfont {
 					font-size: 64rpx;
@@ -104,7 +115,10 @@ export default {
 		
 	}
 	.close-btn {
-		
+		border-top: 1px solid #f0f0f0;
+		padding-top: 30rpx;
+		margin-top: 30rpx;
+		text-align: center;
 	}
 }
 </style>

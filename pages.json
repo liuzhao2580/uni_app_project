@@ -27,8 +27,15 @@
 				"navigationBarTitleText": "搜索页",
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path": "pages/rich-text-editor/rich-text-editor",
+			"style": {
+				"navigationBarTitleText": "文章创建",
+				"enablePullDownRefresh": false
+			}
 		}
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
