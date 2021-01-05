@@ -9,7 +9,9 @@
 				<text class="nav-text">内涵的不只是段子</text>
 			</view>
 			<!-- 发布文章 -->
+			<!-- #ifdef APP-PLUS || H5 -->
 			<view class="cream-box iconfont icon-fabu" @click="releaseClick"></view>
+			<!-- #endif -->
 		</view>
 		<view class="nav-content"></view>
 		<!-- 发布文章 -->
@@ -40,7 +42,6 @@ export default {
 		signedClick() {},
 		// 文章发布
 		releaseClick() {
-			console.log(12);
 			this.releaseModelValue = true
 		}
 	}
