@@ -12,7 +12,7 @@ export default function(options) {
 			name,
 			data
 		}).then(res => {
-			if(res.result.code == 200) reslove(res.result.data)
+			if(res.result.code == 200) reslove(res.result)
 			else reject(res.result)
 		}).catch(err => reject(err))
 	})
