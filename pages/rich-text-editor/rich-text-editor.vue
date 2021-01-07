@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { article_insert_API } from '@/common/api/article.js';
+import { article_insert_API } from '@/common/api/modules/article.js';
 export default {
 	data() {
 		return {
@@ -70,6 +70,8 @@ export default {
 			});
 			const params = {
 				user_id: '5fefea8423976b00015cbd36',
+				user_name: "小火车况且况且",
+				user_avatar: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-pgfxdvln08wfa8a9f6/1f366830-4cab-11eb-b997-9918a5dda011.jpg',
 				title: this.articleTitle,
 				content: html,
 				category_id: '5fefea8264635100014b22b6'

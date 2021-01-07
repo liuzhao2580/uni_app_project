@@ -2,7 +2,7 @@
 	<view class="base-info-box">
 		<view class="base-info">
 			<!-- 头像 -->
-			<view class="user-avatar"><image class="image" src="@/static/tabbar/personal.png"></image></view>
+			<view class="user-avatar"><image class="image" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-pgfxdvln08wfa8a9f6/1f366830-4cab-11eb-b997-9918a5dda011.jpg"></image></view>
 			<!-- 昵称 -->
 			<text class="user-nickName">小火车况且况且</text>
 			<!-- 个人主页 -->
