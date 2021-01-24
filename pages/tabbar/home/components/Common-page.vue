@@ -7,7 +7,10 @@
 
 export default {
     props: {
-        listData: {}
+        listData: {
+            type: Array,
+            default: ()=> []
+        }
     },
     data() {
         return {}
