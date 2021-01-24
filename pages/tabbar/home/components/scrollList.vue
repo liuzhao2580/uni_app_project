@@ -1,7 +1,9 @@
 <template>
 	<swiper class="swiper-box" :current="activeCurrent" @change="swiperChange">
 		<swiper-item v-for="item in tabList" :key="item._id" :item-id="item._id">
-			<view class="swiper-item"><Common-page :gainItem="item" :goodsCardList="tabListData[activeCurrent]" /></view>
+			<view class="swiper-item">
+				<Common-page :listData="tabListData[activeCurrent]" />
+			</view>
 		</swiper-item>
 	</swiper>
 </template>
@@ -9,7 +11,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex';
 import { article_queryList_API } from '@/common/api/modules/article.js';
-import CommonPage from '../components/Common-page.vue';
+import CommonPage from './Common-page.vue';
 export default {
 	components: {
 		CommonPage

@@ -12,9 +12,9 @@
 
 <script>
 import layout from '@/layout/layout.vue';
-import tab from './tab/tab.vue'
-import scrollList from './scrollList/scrollList.vue'
-import { tabbar_api } from '@/common/api/home';
+import tab from './components/tab'
+import scrollList from './components/scrollList'
+import { tabbar_api } from '@/common/api/modules/home';
 export default {
 	components: {
 		layout,
