@@ -89,9 +89,6 @@ export default {
 				margin-left: 20rpx;
 			}
 		}
-		.draft-box {
-			
-		}
 	}
 	.release-type {
 		display: flex;

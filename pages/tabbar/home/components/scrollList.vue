@@ -1,6 +1,6 @@
 <template>
     <swiper class="swiper-box" :current="activeCurrent" @change="swiperChange">
-        <swiper-item v-for="(item,index) in tabList" :key="item._id" :item-id="item._id">
+        <swiper-item v-for="(item,index) in tabList" :key="item._id" :item-id="item._id" class="swiper-item">
             <Common-page :listData="listData[index]" />
         </swiper-item>
     </swiper>
